@@ -1,18 +1,19 @@
+import { WeatherData } from "../interfaces/WeatherData"
 
-export const DegreeSection = () => {
+export const DegreeSection = ({data:{temperature,description,icon}}:{data: WeatherData}) => {
   return (
     <>
     <section className="text-5xl font-bold text-white">
         <span className="text-yellow-500" id="temperature">
-            13
+            {temperature}
         </span>
             °C
     </section>   
     <section>
-        <img id="iconImg" src="https://openweathermap.org/img/wn/04d.png" />
+        <img id="iconImg" src={icon} />
     </section>
     <section className="font-bold uppercase text-xl text-white mb-6" id="description">
-        descripción
+        {description}
     </section>
     </>
   )

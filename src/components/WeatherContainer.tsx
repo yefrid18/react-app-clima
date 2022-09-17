@@ -48,9 +48,9 @@ export const WeatherContainer = ({
   return (
     <main className="w-96 rounded-3xl bg-gradient-to-b from-gray-800 to-gray-700 shadow-lg">
       <div className="flex w-full items-center flex-col p-8">
-        <Location />
-        <DegreeSection />
-        <DetailsTable />
+        <Location data={weather} />
+        <DegreeSection data={weather} />
+        <DetailsTable data={weather} />
       </div>
     </main>
   );
