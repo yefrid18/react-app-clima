@@ -42,7 +42,7 @@ export const DetailsTable = ({
           <th>Vientos:</th>
           <td id="windSpeed">{windSpeed}</td>
         </tr>
-      </tbody>
-    </table>
+      </tbody>      
+    </table>    
   );
 };
