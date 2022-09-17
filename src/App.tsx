@@ -2,6 +2,7 @@ import { FormEvent, useEffect, useState } from "react";
 import { getWeatherByCoords, getWeatherBySearch } from "./api/fetchWeather";
 import { SearchBox } from "./components/SearchBox";
 import { WeatherContainer } from "./components/WeatherContainer";
+import {Footer} from "./components/Footer"
 
 function App() {
   const [fetchedData, setFetchedData] = useState(null);
@@ -47,6 +48,7 @@ function App() {
     <div className="w-full h-screen flex flex-col justify-center items-center">
       <SearchBox handleSearch={handleSearch} />
       <WeatherContainer fetchedData={fetchedData} error={error} />
+      <Footer />
     </div>
   );
 }
