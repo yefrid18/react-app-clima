@@ -47,11 +47,17 @@ export const WeatherContainer = ({
   
   return (
     <main className="w-96 rounded-3xl bg-gradient-to-b from-gray-800 to-gray-700 shadow-lg">
+      {error === "" ? (
       <div className="flex w-full items-center flex-col p-8">
         <Location data={weather} />
         <DegreeSection data={weather} />
         <DetailsTable data={weather} />
       </div>
+      ):(
+        <div className="flex justify-center text-center items-center h-56 text-white font-bold text-xl p-4">
+          {error}
+        </div>
+      )}
     </main>
   );
 };

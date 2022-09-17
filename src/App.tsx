@@ -14,8 +14,6 @@ function App() {
       try {
         const data = await getWeatherByCoords(LAT, LON);
         setFetchedData(data);
-
-
       } catch (err) {
         setError("Error de Localización - Revise su conexión a internet");
       }
